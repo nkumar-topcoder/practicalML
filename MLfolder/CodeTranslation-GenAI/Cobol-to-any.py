@@ -66,11 +66,12 @@ def find_cobol_files(directory):
 #Documenting and Translating Code
 #These functions generate documentation and translate COBOL code to a target language:
 def code_documentation(inputcode):
-    prompt = "You are a Pro*COBOL expert. Convert the following code into documentation and provide context with business logic if required: " + inputcode
+    prompt = "You are a COBOL expert. Convert the following code into documentation and provide context with business logic if required: " + inputcode
     return call_claude_sonet(prompt)
 
+#Documentation prompt
 def code_translation(inputcode, target_language):
-    prompt = "Convert the given Pro*COBOL code into " + target_language + " and ensure proper formatting for the translated code: " + inputcode
+    prompt = "Convert the given COBOL code into " + target_language + " and ensure proper formatting for the translated code: " + inputcode
     return call_claude_sonet(prompt)
 
 #Main Execution
